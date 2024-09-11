@@ -84,13 +84,13 @@ enum class DayOfWeek {
 }
 
 // Sealed Class: Digunakan untuk membatasi pewarisan kelas
-sealed class Result {
-    class Success(val data: String) : Result()
-    class Error(val error: String) : Result()
-}
+// sealed class Result {
+//    class Success(val data: String) : Result()
+//    class Error(val error: String) : Result()
+// }
 
 // Data Class: Kelas yang digunakan untuk menyimpan data, otomatis menghasilkan fungsi seperti toString(), equals(), hashCode(), dan copy()
-data class User(val name: String, val age: Int)
+// data class User(val name: String, val age: Int)
 
 // Function Types and Lambdas: Tipe data fungsi juga bisa disimpan dalam variabel
 val sum: (Int, Int) -> Int = { a, b -> a + b }
@@ -99,9 +99,9 @@ val sum: (Int, Int) -> Int = { a, b -> a + b }
 lateinit var lateInitVar: String
 
 // Delegated Properties: Menggunakan kata kunci 'by' untuk memberikan kontrol khusus
-val lazyValue: String by lazy {
-    "Computed only once!"
-}
+// val lazyValue: String by lazy {
+//    "Computed only once!"
+// }
 
 // Unsigned Integer Types: Tipe bilangan bulat yang hanya bisa positif
 val uInt: UInt = 10u
