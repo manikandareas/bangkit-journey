@@ -168,6 +168,7 @@ fun printAllDataType(): Unit {
     val b = 20
     val max = if (sum(1,2) == 3) a else b
 
+    val inArr = if (3 in myArray) "3 found in the array" else "oow 3 is not int in the array"
 
     lateInitVar = "Lateinit variable"
 
