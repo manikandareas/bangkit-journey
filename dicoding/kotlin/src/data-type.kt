@@ -2,6 +2,9 @@
 * Kotlin Data Types and Special Types
 */
 
+typealias Arithmetic = ((Int, Int) -> Int)?
+typealias NamePerson = String
+
 // Char: Menyimpan karakter tunggal
 val myChar: Char = 'A'
 
@@ -163,6 +166,10 @@ fun printAllDataType(): Unit {
     println("Lazy Value: $lazyValue")
     println("UInt: $uInt")
     println("ULong: $uLong")
+
+    // Lib function and Lambda
+    myList.fold(0) { total, next -> total + next }
+
     // Inline if else
     val a = 10
     val b = 20

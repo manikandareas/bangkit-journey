@@ -11,5 +11,22 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="module-library">
+      <library name="kotlinx">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/benchmarks/src/jmh/java" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/kotlinx-coroutines-core/jvm/src" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/kotlinx-coroutines-test/jvm/src" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/reactive/kotlinx-coroutines-reactor/src" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/ui/kotlinx-coroutines-android/src" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/ui/kotlinx-coroutines-javafx/src" />
+          <root url="jar://$USER_HOME$/Downloads/Kotlin Coroutines 1.9.0 RC.2.zip!/kotlinx.coroutines-1.9.0-RC.2/ui/kotlinx-coroutines-swing/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="jetbrains.kotlinx.coroutines.core" level="project" />
   </component>
 </module>
