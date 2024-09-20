@@ -2,6 +2,7 @@ package com.example.first_app
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.renderscript.ScriptGroup.Binding
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var edtLength: EditText
     private lateinit var btnCalculate: Button
     private lateinit var tvResult: TextView
+
+
 
     companion object {
         private const val STATE_RESULT = "state_result"
@@ -51,7 +54,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onClick(v: View?) {
         if (v?.id == R.id.btn_calculate) {
-            val inputLength = edtLength.text.toString().trim()
+//            val inputLength = edtLength.text.toString().trim()
+            val inputLength = findViewById<EditText>(R.id.edt_length).text.toString().trim()
             val inputWidth = edtWidth.text.toString().trim()
             val inputHeight = edtHeight.text.toString().trim()
              var isAnyEmptyField: Boolean = false
@@ -81,7 +85,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         outState.putString(STATE_RESULT, tvResult.text.toString())
     }
 
-   private fun bindIDWithComponent ():Unit{
+    private fun bindIDWithComponent ():Unit{
         edtWidth = findViewById(R.id.edt_lebar)
         edtHeight = findViewById(R.id.edt_tinggi)
         edtLength = findViewById(R.id.edt_length)
