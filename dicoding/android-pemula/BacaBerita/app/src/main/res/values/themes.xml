@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MySplashScreen" parent="Theme.SplashScreen">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/news_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.BacaBerita</item>
+        <item name="splashScreenIconSize">50dp</item>
+    </style>
+
+    <style name="Theme.BacaBerita" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BacaBerita" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+</resources>
