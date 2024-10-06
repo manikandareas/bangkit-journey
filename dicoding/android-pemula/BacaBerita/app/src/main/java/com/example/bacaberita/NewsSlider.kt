@@ -41,25 +41,24 @@ fun NewsSlider(newsViewModel: NewsViewModel) {
             contentPadding = PaddingValues(horizontal = 16.dp),
             modifier = Modifier
                 .height(196.dp)
-                .fillMaxWidth(), pageSpacing = 8.dp,
+                .fillMaxWidth(),
+            pageSpacing = 8.dp,
         ) { page ->
+            val article = newsViewModel.articles.value?.get(page)
             Card(
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxSize(),
                 onClick = {
-                   newsViewModel.onArticleSelected(newsViewModel.articles.value?.get(page))
+                    newsViewModel.onArticleSelected(article)
                 }
             ) {
                 AsyncImage(
-                    model = newsViewModel.articles.value?.get(page)?.urlToImage,
+                    model = article?.urlToImage,
                     contentDescription = "Slider",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize()
                 )
             }
         }
-
     }
-
-
 }
