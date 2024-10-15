@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.dicodingevent.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_finished"
+        android:name="com.example.dicodingevent.ui.finished.FinishedFragment"
+        android:label="@string/title_finished"
+        tools:layout="@layout/fragment_finished" />
+
+    <fragment
+        android:id="@+id/navigation_upcoming"
+        android:name="com.example.dicodingevent.ui.upcoming.UpcomingFragment"
+        android:label="@string/title_upcoming"
+        tools:layout="@layout/fragment_upcoming" />
+
+    <fragment
+        android:id="@+id/navigation_detail_event"
+        android:name="com.example.dicodingevent.ui.detailEvent.DetailEventFragment"
+        android:label="Detail Event"
+        tools:layout="@layout/fragment_detail_event" />
+
+    <fragment
+        android:id="@+id/navigation_bookmark"
+        android:name="com.example.dicodingevent.ui.bookmark.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.dicodingevent.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+
+</navigation>

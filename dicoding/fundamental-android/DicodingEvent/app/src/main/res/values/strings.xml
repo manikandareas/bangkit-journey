@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Dicoding Event</string>
+    <string name="title_home">Home</string>
+    <string name="title_finished">Finished</string>
+    <string name="title_upcoming">Upcoming</string>
+    <string name="title_search">Search</string>
+    <string name="jombang_east_java">Jombang, East Java</string>
+    <string name="category">Category</string>
+    <string name="bernadya_solo_concert">Bernadya Solo Concert</string>
+    <string name="event_image">Event Image</string>
+    <string name="_26_august_2024">26 August 2024</string>
+    <string name="about_event">About Event</string>
+    <string name="description">Description</string>
+    <string name="more_detail">More detail</string>
+    <string name="_0_0">0/0</string>
+    <string name="bernadya">Bernadya</string>
+    <string name="location">Location</string>
+    <string name="dot">•</string>
+    <string name="calendar">calendar</string>
+    <string name="owner_icon">Owner Icon</string>
+    <string name="group_icon">Group Icon</string>
+    <string name="carousel_image">Carousel Image</string>
+    <string name="bookmark_icon">Bookmark Icon</string>
+    <string name="gdsc_mulawarman_university">GDSC Mulawarman University</string>
+    <string name="bookmarked_events">Bookmarked Events</string>
+    <string name="finished_events">Finished Events</string>
+    <string name="address">Samarinda, East Kalimantan</string>
+    <string name="bookmark_img">bookmark img</string>
+    <string name="hello_manik">Hello, Manik</string>
+    <string name="there_are_32_events_naround_your_location">There are 32 events\naround your location.</string>
+    <string name="search_icon">Search icon</string>
+    <string name="search_your_favorites_events">Search your favorites events ...</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="see_all">See all ►</string>
+    <string name="search_events">Search Events</string>
+    <string name="search">Search</string>
+</resources>

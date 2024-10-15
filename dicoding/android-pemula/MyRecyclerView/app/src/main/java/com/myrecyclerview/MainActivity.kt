@@ -16,7 +16,6 @@ import com.myrecyclerview.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var rvHeroes: RecyclerView
     private val list = ArrayList<Hero>()
 
@@ -36,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         list.addAll(getListHeroes())
         showRecyclerList()
 
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -44,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //    Get data from resources
     private fun getListHeroes(): ArrayList<Hero> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -56,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         return listHero
     }
 
+    //    Show recycler view and set adapter
     private fun showRecyclerList() {
         rvHeroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(list)
@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_list -> {
                 rvHeroes.layoutManager = LinearLayoutManager(this)
             }
+
             R.id.action_grid -> {
                 rvHeroes.layoutManager = GridLayoutManager(this, 2)
             }

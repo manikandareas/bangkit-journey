@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.carousel.MaskableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/carouselItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/purple_200"
+        app:strokeWidth="4dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/carouselImageView"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:contentDescription="@string/carousel_image"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#10000000" />
+
+
+            <FrameLayout
+                android:id="@+id/actBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/rounded"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/bookmarkIcon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/bookmark_icon"
+                    android:src="@drawable/baseline_bookmark_add_24"
+                    app:tint="@color/purple_200" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:id="@+id/eventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:maxLines="1"
+                    android:text="@string/bernadya_solo_concert"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/eventOwnerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/nunito_semi_bold"
+                    android:maxLines="1"
+                    android:text="@string/gdsc_mulawarman_university"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/eventCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gdsc_mulawarman_university"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.carousel.MaskableFrameLayout>
