@@ -17,6 +17,7 @@ import com.example.dicodingevent.ui.bookmark.BookmarkViewModel
 import com.example.dicodingevent.ui.common.ListAdapter
 import com.google.android.material.carousel.CarouselLayoutManager
 import com.google.android.material.carousel.CarouselSnapHelper
+import com.google.android.material.carousel.HeroCarouselStrategy
 
 class HomeFragment : Fragment() {
 
@@ -65,9 +66,11 @@ class HomeFragment : Fragment() {
     private fun setUpcomingCarousel() {
         binding.upcomingCarousel.apply {
             setHasFixedSize(true)
-            layoutManager = CarouselLayoutManager()
+            layoutManager = CarouselLayoutManager().apply {
+                setCarouselStrategy(HeroCarouselStrategy())
+                carouselAlignment = CarouselLayoutManager.ALIGNMENT_CENTER
+            }
             CarouselSnapHelper().attachToRecyclerView(this)
-
         }
     }
 
@@ -100,10 +103,12 @@ class HomeFragment : Fragment() {
         }
 
         homeViewModel.upcomingEventsIsLoading.observe(viewLifecycleOwner) { isLoading ->
-            binding.progressBarUpcomingEvents.visibility = if (isLoading) View.VISIBLE else View.GONE
+            binding.progressBarUpcomingEvents.visibility =
+                if (isLoading) View.VISIBLE else View.GONE
         }
         homeViewModel.finishedEventsIsLoading.observe(viewLifecycleOwner) { isLoading ->
-            binding.progressBarFinishedEvents.visibility = if (isLoading) View.VISIBLE else View.GONE
+            binding.progressBarFinishedEvents.visibility =
+                if (isLoading) View.VISIBLE else View.GONE
         }
 
         homeViewModel.error.observe(viewLifecycleOwner) { errorMessage ->
@@ -115,6 +120,17 @@ class HomeFragment : Fragment() {
         bookmarkViewModel.toastMessage.observe(viewLifecycleOwner) { it ->
             it.getContentIfNotHandled()?.let { message ->
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        bookmarkViewModel.bookmarkedEvents.observe(viewLifecycleOwner) { evt ->
+            if (evt != null) {
+                if (evt.size > 0) {
+                    binding.imgBookmark.setImageResource(R.drawable.baseline_bookmark_24)
+                } else {
+                    binding.imgBookmark.setImageResource(R.drawable.baseline_bookmark_border_24)
+                }
+
             }
         }
     }

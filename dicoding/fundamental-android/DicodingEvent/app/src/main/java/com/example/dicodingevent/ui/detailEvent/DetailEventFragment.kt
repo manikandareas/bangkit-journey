@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
@@ -53,33 +52,36 @@ class DetailEventFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.event.observe(viewLifecycleOwner) { res ->
             val event = res?.event
-            binding.eventName.text = event?.name
-            binding.eventDate.text = event?.beginTime
-            binding.eventLocation.text = event?.cityName
-            binding.eventSummary.text = event?.summary
-            binding.categoryEvent.text = event?.category
 
-            binding.eventParticipant.text = "${event?.registrants} / ${event?.quota} Participants"
-            binding.eventOwnerName.text = event?.ownerName
+            with(binding) {
+                eventName.text = event?.name
+                eventDate.text = event?.beginTime
+                eventLocation.text = event?.cityName
+                eventSummary.text = event?.summary
+                categoryEvent.text = event?.category
 
+                eventParticipant.text = "${
+                    event?.registrants?.let {
+                        event?.quota?.minus(
+                            it
+                        )
+                    }
+                } Quota Left"
+                eventOwnerName.text = event?.ownerName
 
-            Utils.renderHtmlString(binding.eventDescription, event?.description ?: "")
+                btnMore.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    if (event != null) {
+                        intent.data = Uri.parse(event.link)
+                    }
+                    startActivity(intent)
+                }
+                Utils.renderHtmlString(eventDescription, event?.description ?: "")
+            }
+
             Glide.with(this)
                 .load(event?.mediaCover!!) // URL Gambar
                 .into(binding.eventImage) // imageView mana yang
-
-
-            binding.btnMore.setOnClickListener {
-                val intent = Intent(Intent.ACTION_VIEW)
-                intent.data = Uri.parse(event.link)
-                if (intent.resolveActivity(requireActivity().packageManager) != null) {
-                    // Menjalankan intent untuk membuka link di browser
-                    startActivity(intent)
-                } else {
-                    // Tangani jika tidak ada browser yang dapat menangani intent
-                    Toast.makeText(requireContext(), "No browser found", Toast.LENGTH_SHORT).show()
-                }
-            }
         }
 
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->

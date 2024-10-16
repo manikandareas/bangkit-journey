@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:layout_marginEnd="8dp"
     android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
     app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:strokeColor="@color/purple_200"
         app:strokeWidth="4dp">
