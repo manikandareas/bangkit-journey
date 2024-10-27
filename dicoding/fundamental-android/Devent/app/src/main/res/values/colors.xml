@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+    <!-- Primary Colors -->
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#219C90</color>
+    <color name="colorPrimaryVariant">#1A7D73</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- Secondary Colors -->
+    <color name="colorSecondary">#FFC700</color>
+    <color name="colorSecondaryVariant">#E6B300</color>
+    <color name="colorOnSecondary">#000000</color>
+
+    <!-- Tertiary Colors -->
+    <color name="colorTertiary">#FFF455</color>
+    <color name="colorTertiaryVariant">#E6DB4D</color>
+    <color name="colorOnTertiary">#000000</color>
+
+    <!-- Background and Surface Colors -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+
+    <color name="colorSurface">#F5F5F5</color>
+    <color name="colorOnSurface">#000000</color>
+
+    <!-- Error Colors -->
+    <color name="colorError">#EE4E4E</color>
+    <color name="colorOnError">#FFFFFF</color>
+
+    <!-- Outline and Grayscale Colors -->
+    <color name="outline">#CCCCCC</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorLightGray">#E0E0E0</color>
+
+    <!-- Tints and Alpha Variants -->
+    <color name="colorPrimary5">#05219C90</color> <!-- 20% opacity of #219C90 -->
+    <color name="colorPrimary10">#10219C90</color> <!-- 20% opacity of #219C90 -->
+    <color name="colorPrimary20">#33219C90</color> <!-- 20% opacity of #219C90 -->
+    <color name="colorPrimary80">#80219C90</color> <!-- 20% opacity of #219C90 -->
+    <color name="colorBackground80">#CCFFFFFF</color> <!-- 80% opacity of white -->
+    <color name="colorBackground20">#33FFFFFF</color> <!-- 20% opacity of white -->
+
+    <color name="icon_tint">#292929</color>
+    </resources>

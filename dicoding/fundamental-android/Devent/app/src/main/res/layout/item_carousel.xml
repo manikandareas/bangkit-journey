@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.carousel.MaskableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carousel_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="4dp"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivEventCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_me"
+            app:shapeAppearanceOverlay="@style/imageViewRounded24" />
+
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/bg_badge_favorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_favorite_border"
+            app:tint="@color/colorSecondary"
+            android:contentDescription="@null" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:background="@drawable/overlay_background"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvEventInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Devent.LabelSmall"
+                android:textColor="#BDBDBD" />
+
+            <TextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:maxLines="1"
+                android:text="@string/live_music_monata"
+                android:textAppearance="@style/TextAppearance.Devent.TitleMedium"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvEventOrganizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Devent.BodyMedium"
+                android:textColor="#BDBDBD" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</com.google.android.material.carousel.MaskableFrameLayout>

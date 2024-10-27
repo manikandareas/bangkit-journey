@@ -62,7 +62,7 @@ class DetailEventFragment : Fragment() {
 
                 eventParticipant.text = "${
                     event?.registrants?.let {
-                        event?.quota?.minus(
+                        event.quota?.minus(
                             it
                         )
                     }

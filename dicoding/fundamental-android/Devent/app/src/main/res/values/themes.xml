@@ -1,0 +1,102 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Devent" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnError">@color/colorOnError</item>
+
+        <item name="themeIconTint">@color/icon_tint</item>
+    </style>
+
+
+
+    <style name="Theme.Devent.Splash" parent="Theme.Devent">
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="TextAppearance.Devent.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.Devent.Headline2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0.008</item>
+    </style>
+
+    <style name="TextAppearance.Devent.Subtitle1" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.Devent.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.005</item>
+    </style>
+
+    <style name="TextAppearance.Devent.Body1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.003</item>
+    </style>
+
+    <style name="TextAppearance.Devent.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.003</item>
+    </style>
+
+    <style name="TextAppearance.Devent.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.002</item>
+    </style>
+
+    <style name="imageViewRounded8">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="imageViewRounded16">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="imageViewRounded24">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="imageViewBottomRounded24">
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="imageViewCircle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

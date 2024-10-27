@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_upcoming"
+        android:icon="@drawable/ic_upcoming"
+        android:title="@string/upcoming" />
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_explore"
+        android:title="@string/explore" />
+
+
+    <item
+        android:id="@+id/navigation_finished"
+        android:icon="@drawable/ic_finished"
+        android:title="@string/finished" />
+
+</menu>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.detail_event.DetailEventActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_favorite"
+        app:layout_anchorGravity="bottom|end"
+        app:tint="@color/colorOnPrimary" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabShowDetail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/go_to_event_page"
+        android:textAllCaps="false"
+        android:textColor="@color/colorOnPrimary"
+        app:icon="@drawable/ic_explore_page"
+        app:iconGravity="end"
+        app:iconTint="@color/colorOnPrimary"
+        app:layout_anchorGravity="bottom|end" />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:paddingHorizontal="16dp"
+        app:elevation="0dp"
+        app:liftOnScrollColor="@color/colorBackground80">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+
+                <!--                <ImageButton-->
+
+                <!--                    android:layout_width="50dp"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                  android:layout_gravity="start|center_vertical"-->
+                <!--                    android:scaleType="centerCrop"-->
+                <!--                    android:src="@drawable/ic_back"/>-->
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_button"
+                    android:contentDescription="@null"
+                    android:paddingStart="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/icon_tint"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvEventOrganizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/dicoding_indonesia"
+                    android:textAppearance="@style/TextAppearance.Devent.Subtitle1" />
+
+                <ImageButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/circle_button"
+                    android:contentDescription="@null"
+
+                    android:scaleType="center"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/icon_tint" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!--         Content-->
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivEventCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="224dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_me"
+                    app:shapeAppearanceOverlay="@style/imageViewRounded24" />
+
+
+                <TextView
+
+                    android:layout_gravity="start|bottom"
+                    android:padding="12dp"
+                    android:background="@drawable/overlay_buttom_rounded"
+                    android:id="@+id/tvEventInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.Devent.TitleMedium"
+                    android:textColor="@android:color/white"
+
+                    />
+
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/dicoding_indonesia"
+                android:textAppearance="@style/TextAppearance.Devent.Headline2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_badge"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_location_pin"
+                        app:tint="@color/colorOnPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inter_semi_bold"
+                            android:text="@string/location"
+                            android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/tvEventLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/samarinda"
+                            android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_badge"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_group"
+                        app:tint="@color/colorOnPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inter_semi_bold"
+                            android:text="@string/quota"
+                            android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/tvEventQuota"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/_1000"
+                            android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/summary"
+                android:textAppearance="@style/TextAppearance.Devent.Body1" />
+
+
+            <TextView
+                android:id="@+id/tvEventSummary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/dicoding_indonesia"
+                android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/description"
+                android:textAppearance="@style/TextAppearance.Devent.Body1" />
+
+            <TextView
+                android:id="@+id/tvEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/dicoding_indonesia"
+                android:textAppearance="@style/TextAppearance.Devent.BodyMedium" />
+
+            <!--        <FrameLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            >-->
+            <!--            <ImageView-->
+            <!--                android:layout_width=""-->
+            <!--                android:layout_height=""-->
+            <!--        </FrameLayout>-->
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

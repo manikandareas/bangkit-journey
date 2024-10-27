@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
             setHasFixedSize(true)
             layoutManager = CarouselLayoutManager().apply {
                 setCarouselStrategy(HeroCarouselStrategy())
-                carouselAlignment = CarouselLayoutManager.ALIGNMENT_CENTER
+//                carouselAlignment = CarouselLayoutManager.ALIGNMENT_CENTER
             }
             CarouselSnapHelper().attachToRecyclerView(this)
         }

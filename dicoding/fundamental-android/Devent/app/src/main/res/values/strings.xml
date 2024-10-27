@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Devent</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="no_internet">No Internet Connection</string>
+
+    <string name="error_code_400">Oops! Something went wrong. Please check your input and try again.</string>
+    <string name="error_code_401">Your session has expired. Please log in again.</string>
+    <string name="error_code_403">Sorry, you don\'t have permission to access this resource.</string>
+    <string name="error_code_404">We couldn\'t find what you\'re looking for.</string>
+    <string name="error_code_408">The request timed out. Please try again.</string>
+    <string name="error_code_429">You\'re making requests too quickly. Please slow down.</string>
+    <string name="error_code_500">We\'re experiencing some issues. Please try again later.</string>
+    <string name="error_code_default">An unexpected error occurred. Please try again.</string>
+    <string name="search_your_favorites_events">Search your favorites events</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="view_all">View all</string>
+    <string name="explore">Explore</string>
+    <string name="finished">Finished</string>
+    <string name="live_music_monata">Live Music Monata</string>
+    <string name="samarinda">Samarinda</string>
+    <string name="dicoding_indonesia">Dicoding Indonesia</string>
+    <string name="go_to_event_page">Go to Event Page</string>
+    <string name="quota">Quota left</string>
+    <string name="_1000">1000</string>
+    <string name="summary">Summary</string>
+    <string name="description">Description</string>
+    <string name="location">Location</string>
+    <string name="finished_events">Finished Events</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="vito_andareas_manik">Vito Andareas Manik</string>
+    <string name="preferences">Preferences</string>
+    <string name="dark_mode_toggle">Dark mode toggle</string>
+    <string name="event_reminder_toggle">Event Reminder Toggle</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="event_reminder">Daily Reminder</string>
+    <string name="oops_no_event_found">Oops, no event found</string>
+    <string name="favorite_events">Favorite Events</string>
+    <string name="splashfragment">SplashFragment</string>
+    <string name="favorite">Favorite</string>
+</resources>

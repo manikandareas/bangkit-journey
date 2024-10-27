@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.preferences.PreferencesFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:paddingHorizontal="16dp"
+        app:elevation="0dp"
+        app:liftOnScrollColor="@color/colorBackground80">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_button"
+                    android:contentDescription="@null"
+                    android:paddingStart="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/icon_tint"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/preferences"
+                    android:textAppearance="@style/TextAppearance.Devent.Subtitle1" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!--         Content-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivEventCover"
+                android:layout_width="match_parent"
+                android:layout_height="224dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_me"
+                app:shapeAppearanceOverlay="@style/imageViewRounded24" />
+
+
+            <TextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/vito_andareas_manik"
+                android:textAppearance="@style/TextAppearance.Devent.Headline2" />
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:contentDescription="@string/dark_mode_toggle"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/dark_theme"
+                android:textAppearance="@style/TextAppearance.Devent.TitleMedium" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchReminder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:contentDescription="@string/event_reminder_toggle"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/event_reminder"
+                android:textAppearance="@style/TextAppearance.Devent.TitleMedium" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

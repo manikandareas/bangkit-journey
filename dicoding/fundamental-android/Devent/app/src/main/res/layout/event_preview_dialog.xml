@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Material3.BottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivEventCover"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_me"
+        app:shapeAppearanceOverlay="@style/imageViewRounded16" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tvEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dicoding_indonesia"
+            android:textAppearance="@style/TextAppearance.Devent.TitleMedium" />
+    </LinearLayout>
+
+
+</LinearLayout>

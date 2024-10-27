@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorBackground"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    app:cardCornerRadius="12dp"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivEventCover"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_me"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvEventInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Devent.LabelSmall"
+                android:textColor="@color/colorGray"
+                android:text="@string/samarinda"/>
+            <TextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:text="@string/live_music_monata"
+                android:textAppearance="@style/TextAppearance.Devent.TitleMedium"
+                android:maxLines="1"
+                android:textColor="@color/colorOnBackground" />
+
+            <TextView
+                android:id="@+id/tvEventOrganizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textAppearance="@style/TextAppearance.Devent.BodyMedium"
+                android:textColor="@color/colorGray"
+                android:text="@string/dicoding_indonesia"/>
+            <TextView
+                android:id="@+id/tvEventCateogry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Devent.BodyMedium"
+                android:textColor="@color/colorGray"
+                android:text="@string/dicoding_indonesia"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/btnFavorite"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_favorite_border"
+        app:tint="@color/colorSecondary"
+        android:background="@null"
+        android:contentDescription="@null" />
+
+</androidx.cardview.widget.CardView>
