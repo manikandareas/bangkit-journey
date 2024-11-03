@@ -16,10 +16,10 @@ import com.google.android.material.snackbar.Snackbar
 
 class UpcomingFragment : Fragment() {
 
-    private var _binding: FragmentUpcomingBinding? = null
-
     private val viewModel by activityViewModels<UpcomingViewModel>()
     private val bookmarkViewModel by activityViewModels<BookmarkViewModel>()
+    private var _binding: FragmentUpcomingBinding? = null
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
