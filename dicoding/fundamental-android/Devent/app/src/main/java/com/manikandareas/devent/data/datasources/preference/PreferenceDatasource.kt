@@ -27,7 +27,7 @@ class PreferenceDatasource(
 
     val isDailyReminderEnabled: Flow<Boolean> = dataStore.data
         .map { preferences ->
-            preferences[IS_DAILY_REMINDER_ENABLED] ?: false
+            preferences[IS_DAILY_REMINDER_ENABLED] == true
         }
 
     suspend fun setIsDailyReminderEnabled(enabled: Boolean) = withContext(ioDispatcher) {
@@ -37,7 +37,7 @@ class PreferenceDatasource(
     }
 
     val isFirstTime: Flow<Boolean> = dataStore.data.map { preferences ->
-        preferences[IS_FIRST_TIME_KEY] ?: true
+        preferences[IS_FIRST_TIME_KEY] != false
     }
 
     suspend fun setIsFirstTime(isFirstTime: Boolean) = withContext(ioDispatcher) {

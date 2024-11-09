@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Stories</string>
+
+    <string name="error_request_timeout">Request timed out, try again!</string>
+    <string name="error_too_many_requests">Too many requests, please wait a moment.</string>
+    <string name="error_no_internet">No internet, check your connection!</string>
+    <string name="error_server">Server error, try again later!</string>
+    <string name="error_serialization">Data error, please try again.</string>
+    <string name="error_unknown">Something went wrong, try again!</string>
+    <string name="hands_connect">Hands Connect</string>
+    <string name="let_s_connect_with_us">Let\'s Connect With Us!</string>
+    <string name="set_up_your_account">Set up your account</string>
+    <string name="email_or_password_is_incorrect">Email or password is incorrect</string>
+    <string name="story_image">Story Image</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
 </resources>

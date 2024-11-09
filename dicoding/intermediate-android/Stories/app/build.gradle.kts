@@ -2,15 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.example.stories"
+    namespace = "com.manikandareas.stories"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.stories"
-        minSdk = 24
+        applicationId = "com.manikandareas.stories"
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -25,6 +26,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "BASE_URL", "\"https://story-api.dicoding.dev/v1/\"")
+        }
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://story-api.dicoding.dev/v1/\"")
         }
     }
     compileOptions {
@@ -35,11 +40,28 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 }
 
 dependencies {
+
+    implementation(libs.bundles.ktor)
+
+    implementation(libs.bundles.koin)
+
+    implementation(libs.androidx.datastore.preferences)
+
+    implementation(libs.androidx.ui.text.google.fonts)
+
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.coil.kt.coil.compose)
+    implementation(libs.coil)
+
+    implementation(libs.androidx.compose.animation)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
